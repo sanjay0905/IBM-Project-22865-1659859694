@@ -1,8 +1,8 @@
 const form = document.querySelector("form");
 eField = form.querySelector(".email"),
-    eInput = eField.querySelector("input"),
-    pField = form.querySelector(".password"),
-    pInput = pField.querySelector("input");
+eInput = eField.querySelector("input"),
+pField = form.querySelector(".password"),
+pInput = pField.querySelector("input");
 
 form.onsubmit = (e) => {
     e.preventDefault();
@@ -25,7 +25,7 @@ form.onsubmit = (e) => {
             eField.classList.remove("valid");
             let errorTxt = eField.querySelector(".error-txt");
 
-            (eInput.value != "") ? errorTxt.innerText = "Enter a valid email address": errorTxt.innerText = "Email can't be blank";
+            (eInput.value != "") ? errorTxt.innerText = "Enter a valid email address": errorTxt.innerText = "Email is required";
         } else {
             eField.classList.remove("error");
             eField.classList.add("valid");
